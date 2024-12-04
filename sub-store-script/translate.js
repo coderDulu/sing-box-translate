@@ -17,7 +17,7 @@ let singboxProxies = await produceArtifact({
 
 
 
-function convertToSingBoxJson(singboxProxies) {
+function convertToSingBoxJson(singboxProxies, template) {
   try {
     const ADD_TAG = '🚀 节点选择';
     const newTemplate = JSON.parse(JSON.stringify(template));
@@ -40,5 +40,5 @@ function convertToSingBoxJson(singboxProxies) {
   }
 }
 // JSON
-const newProxies = convertToSingBoxJson(singboxProxies)
-$content = JSON.stringify(singboxProxies, null, 2)
+const newProxies = convertToSingBoxJson(singboxProxies, template)
+$content = JSON.stringify({}, null, 2)
