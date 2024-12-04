@@ -6,12 +6,13 @@
 // produce proxies
 // backend version(>2.14.156):
 const { type, name } = $arguments
-let singboxProxies = await produceArtifact({
+let proxies = await produceArtifact({
+  name,
   type: /^1$|col/i.test(type) ? 'collection' : 'subscription',
-  name, // subscription name
-  platform: 'sing-box', // target platform
-  produceType: 'internal' // 'internal' produces an Array, otherwise produces a String( JSON.parse('JSON String') )
+  platform: 'sing-box',
+  produceType: 'internal',
 })
+
 
 
 function convertToSingBoxJson(singboxProxies) {
