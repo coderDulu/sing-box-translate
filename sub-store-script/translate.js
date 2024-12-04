@@ -8,7 +8,7 @@
 const { name } = $arguments
 let singboxProxies = await produceArtifact({
   type: 'subscription', // type: 'subscription' 或 'collection'
-  name, // subscription name
+  name: "claw-sg", // subscription name
   platform: 'sing-box', // target platform
   produceType: 'internal' // 'internal' produces an Array, otherwise produces a String( JSON.parse('JSON String') )
 })
