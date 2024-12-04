@@ -5,10 +5,10 @@
 
 // produce proxies
 // backend version(>2.14.156):
-const { name } = $arguments
+const { type, name } = $arguments
 let singboxProxies = await produceArtifact({
-  type: 'subscription', // type: 'subscription' 或 'collection'
-  name: "claw-sg", // subscription name
+  type: /^1$|col/i.test(type) ? 'collection' : 'subscription',
+  name, // subscription name
   platform: 'sing-box', // target platform
   produceType: 'internal' // 'internal' produces an Array, otherwise produces a String( JSON.parse('JSON String') )
 })
