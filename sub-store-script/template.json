@@ -94,8 +94,7 @@
     {
       "tag": "🚀 节点选择",
       "type": "selector",
-      "outbounds": [
-      ]
+      "outbounds": []
     },
     {
       "tag": "📹 YouTube",
